@@ -48,7 +48,7 @@ automations:
       # such PRs to save reviewers time for such changes.
       # - action: approve@v1
       
-   no_tests:
+  no_tests:
     if:
       - {{ files | match(regex=r/(test|spec)/) | nope }}
     run: 
