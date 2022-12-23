@@ -67,6 +67,14 @@ automations:
         args:
           approvals: 2
 
+  senior_review:
+    if:
+      - {{ files | match(regex=r/.cm\//) | some }}
+    run:
+      - action: require-reviewers@v1
+        args:
+          reviewers: ['kishorer0ck']
+
           
 
 calc:
